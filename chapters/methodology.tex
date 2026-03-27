@@ -1,0 +1,165 @@
+\chapter{Methodology}
+\label{chap:method}
+
+\section{Research Design}
+
+The quantitative and experimental research design is followed in the present study because it will
+develop and test machine learning to forecast the post-harvest loss risk. A quantitative research
+method is selected because the given study aims at examining structured numerical data and
+determining relationships between the independent variables and the target outcome variable of the
+research. The experimental aspect involves the training and testing of various machine learning
+models to determine their predictive performance.
+
+This design is appropriate because the research questions are objective in nature, measuring the
+relationship between factors that include storage conditions, transportation, and environmental
+variables and their effect on loss after harvest. The quantitative approach will make it possible
+to statistically assess results and compare individual models on objective grounds. Moreover, the
+experimental methodology facilitates reproducibility because models can be re-trained on exactly
+the same dataset and parameters. This design is hence suitable in the creation of a sound,
+data-driven decision support instrument for smallholder agribusinesses.
+
+
+\section{Research Onion Explanation}
+
+The research is grounded in the research onion model, which is conceptualized as a series of
+methodological choices layered from the outside in.
+
+At the philosophical level, the research is based on \textbf{positivism}, as the researcher assumes
+that reality can be measured objectively using observable data. This is suitable because the
+variables included are measurable, such as temperature, conditions of storage, and time spent on
+transport.
+
+The study uses a \textbf{deductive approach}, starting with the existing theory on post-harvest
+losses and machine learning, which is then tested using empirical data analysis. Hypotheses on the
+effect of certain factors and model performance are tested using statistical procedures.
+
+The study design is \textbf{experimental} in the sense that the results of various machine learning
+algorithms are compared upon the same dataset to assess predictive accuracy.
+
+The \textbf{time horizon} is cross-sectional, where data are analyzed at a particular point in
+time rather than over long periods. This is appropriate given the emphasis on forecasting loss risk
+depending on present conditions, as opposed to studying long-term trends.
+
+
+\section{Data Collection}
+
+This research uses secondary data as the main information source. Specifically, the data is
+sourced from the Nigeria General Household Survey (GHS-Panel Wave~5, 2023--2024)~\cite{ghspanel2024nigeria},
+which is part of the World Bank's Living Standards Measurement Study -- Integrated Surveys on
+Agriculture (LSMS-ISA). This survey provides organizational and country-based data concerning
+smallholder agriculture in Nigeria.
+
+The data is organized and table-like, and hence machine learning applications can readily be
+applied to it. It includes both numerical and categorical variables involved in the post-harvest
+processes. The key features obtained include:
+
+\begin{itemize}
+    \item Storage conditions (e.g.\ traditional versus improved storage methods)
+    \item Time and distance of transportation
+    \item Environmental factors (e.g.\ rainfall and temperature)
+    \item Management of practices in harvest and post-harvest phases
+\end{itemize}
+
+The post-harvest loss risk target variable is calculated in accordance with available data based on
+the comparison of harvested and sold quantities, allowing each record to be classified as either
+high-loss or low-loss.
+
+
+\section{Data Preprocessing}
+
+Preprocessing of data is a very important measure to guarantee the size and quality of the data.
+The process begins with \textbf{data cleaning}, at which point inconsistencies, duplicates, and
+irrelevant variables are eliminated.
+
+\textbf{Missing values} are handled using appropriate techniques such as imputation or elimination,
+based on the quantity and significance of the missing data. \textbf{Categorical variables} (e.g.\
+type of storage and handling practises) are converted into numerical representation using encoding
+schemes like one-hot encoding or label encoding, to ensure compatibility with machine learning
+algorithms.
+
+\textbf{Numerical variables}, wherever applicable, are standardized or normalized by adopting equal
+scaling of features. This is especially important for models that are sensitive to the magnitude of
+features, such as Logistic Regression. Preprocessing in general guarantees the appropriate
+organization, consistency, and aptness of the dataset for proper model training and evaluation.
+
+
+\section{Machine Learning Models}
+
+This study uses three machine learning models: Logistic Regression, Decision Trees, and Random
+Forests. Logistic Regression is an easy-to-understand model adopted as the base model. It works
+well when dealing with binary classification issues and gives explicit information on how the
+independent variables relate to the target outcome.
+
+Decision Trees are included because of their rule-based structure, which makes the interpretation of
+decision paths easy. They are able to find non-linear correlations and can deal with both nominal
+and numerical data.
+
+Random Forest is employed as an ensemble learning technique to enhance predictive performance. It
+minimizes overfitting by utilizing many decision trees and augments generalization. It is applicable
+especially when identifying intricate interactions among variables.
+
+These models have been selected because of their simplicity, interpretability, and ability to work
+with small to medium-sized datasets. They are less resource-intensive and easier to apply in a
+practical smallholder setting than deep learning models.
+
+
+\section{Model Evaluation Metrics}
+
+The models are tested based on four primary metrics: accuracy, precision, recall, and F1-score,
+supplemented by AUC-ROC.
+
+\textbf{Accuracy} considers the total correctness of predictions. It can however be misleading when
+an imbalanced dataset is used. \textbf{Precision} measures the fraction of correctly predicted
+positive cases in reference to the total number of predicted positives. The importance of high
+precision lies in minimizing false alarms. \textbf{Recall} determines the model's capability to
+correctly identify actual positive cases. This is especially pertinent in this research as failure
+to identify high-risk situations of loss would result in poor decision-making. The \textbf{F1-score}
+balances precision and recall and is a good measure to use when data is imbalanced. The
+\textbf{AUC-ROC} (Area Under the Receiver Operating Characteristic Curve) measures the overall
+discriminative ability of the model across all classification thresholds. All of these metrics
+together give a complete analysis of model performance.
+
+
+\section{Feature Importance Analysis}
+
+An analysis of the influence of features on post-harvest loss risk is performed to identify the most
+influential factors. This is primarily accomplished through the Random Forest model, which provides
+a ranking of features according to their contribution to prediction accuracy. The analysis of
+feature importance allows the study to identify crucial drivers such as storage conditions, time of
+transportation, and environmental factors. This not only enhances the interpretability of the model
+but is also useful in making convenient decisions that show areas where interventions are likely to
+be most effective.
+
+\section{Code Repository}
+
+The complete source code, data preprocessing scripts, and model training pipelines developed
+for this project are publicly available in the following GitHub repository:
+
+\begin{center}
+    \url{https://github.com/achauque14/ML-Post-harvest-loss-risk-project}
+\end{center}
+
+The repository contains all Python scripts used for data cleaning, model training, evaluation,
+and visualization, along with instructions for reproducing the results presented in this
+dissertation.
+
+
+\section{Ethical Considerations}
+
+Ethical issues are put into consideration during the research process. The research involves the
+use of secondary data found in publicly accessible materials, and as a result, there is adherence
+to policies governing the use of such data. No personal identity information is released. Data
+privacy and confidentiality are ensured, and the analysis is conducted in a responsible manner in
+order to prevent improper use or misleading results. Also, the research supports the responsible
+use of artificial intelligence, concentrating on the transparency and impartiality of model
+development.
+
+
+\section{Limitations of Methodology}
+
+This research is also methodologically limited in a number of aspects. Although the dataset used
+was adequate for the analysis, its size might limit the generalisability of findings. There is
+potential data bias (reporting error or regional bias) that may influence model performance. In
+addition, the use of cross-sectional data limits the temporal analysis of post-harvest losses.
+Lastly, the emphasis on simple models that are good in interpretability can lead to worse
+predictive power than more complex methods.

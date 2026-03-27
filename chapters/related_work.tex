@@ -1,0 +1,165 @@
+\chapter{Related Work}
+\label{chap:related}
+
+\section{Machine Learning Models for Prediction}
+
+The role of machine learning models in predictive analytics in the agricultural sphere is central
+when working with structured data under limited computing capabilities. In this paper, three popular
+and interpretable models are examined: Logistic Regression, Decision Trees, and Random Forests. They
+are suitable for smallholder situations and can be used with tabular farm statistics. These models
+are considered in the context of Research Question~2, which investigates how well simple machine
+learning methods can forecast post-harvest loss risk with limited data.
+
+\subsection{Logistic Regression}
+
+Logistic Regression is among the most basic classification algorithms applicable in machine
+learning. It is necessarily applicable to binary classification problems, such as identifying when
+the risk of post-harvest losses is high or low. The model uses input variables to estimate the
+probability of a specific outcome, mapping predictions in the range 0--1 by use of a logistic
+function. The simplicity and the ability to interpret results are among the greatest benefits of
+Logistic Regression. The features have a linear contribution to the prediction, which permits a
+clear understanding of how separate factors affect the result.
+
+Logistic Regression has been applied widely in agriculture and is efficient with fewer computational
+requirements. As \cite{jabed2024crop} point out, less complex models like Logistic Regression are
+still very applicable in situations with small datasets where interpretability is paramount. This is
+more significant among the smallholders who need understandable and distinguishable decision support
+systems. However, an inconvenience of Logistic Regression is that it does not capture non-linear
+relationships of variables, and hence cannot describe the complexity of more intricate
+agroscenarios.
+
+\subsection{Decision Trees}
+
+Decision Trees offer a classification and prediction method that is rule-based and hence very
+intuitive and easy to interpret. This model effectively subdivides the dataset according to feature
+values, creating a tree-like structure of decisions. The internal nodes signify decision rules and
+the leaf nodes signify the predicted outcomes. This framework enables users to follow the
+decision-making process step by step, which proves to be important especially in real-world
+agriculture.
+
+The use of Decision Trees can be accomplished effectively to work with both numerical and categorical
+data, as it is flexible enough to represent the agricultural datasets which frequently have different
+types of features. According to \cite{meghraoui2024applied}, tree-based models have been extensively
+used in agricultural prediction activities because they are easy to interpret and can work with
+heterogeneous data. Moreover, Decision Trees are able to describe non-linear trends among variables
+and therefore have better prediction ability than linear models. They are however susceptible to
+overfitting, particularly in situations where the tree is overly complicated, which may lower
+generalisability to new data.
+
+\subsection{Random Forest}
+
+Random Forest is an ensemble learning technique which constructs several Decision Trees and
+aggregates their predictions to enhance overall performance. The aggregation of multiple tree outputs
+additionally reduces the risk of overfitting and enhances predictive performance. The trees in the
+forest are trained on random subsets of the data and features, which gives diversity in the models
+and makes them more robust.
+
+Random Forest has consistently proven to outperform individual models in agricultural prediction
+work. According to \cite{jabed2024crop}, ensemble methods, especially Random Forest, can be used to
+capture complicated interactions between variables while being relatively accurate. As
+\cite{meghraoui2024applied} further explain, these models can process a large feature set together
+with noisy data, both typical of an agricultural setting. Although, unlike single Decision Trees, a
+Random Forest cannot be readily interpreted, it has the ability to conduct feature importance
+analysis, which gives a picture of the most impactful variables in making predictions.
+
+\subsection{Relevance to the Study}
+
+These three models have been chosen based on trade-offs between the need to simplify, be
+interpretable, and be able to predict. Logistic Regression is transparent and easy to use, Decision
+Trees offer interpretable rule-based insights and higher accuracy, and Random Forest provides an
+enhanced ensemble learning prediction. Collectively, the models allow for a holistic analysis of
+post-harvest loss risk, even with a limited amount of data. Within the context of this comparative
+approach, Research Question~2 lies in evaluating the trade-offs between model complexity and
+predictive power in the smallholder agricultural environment.
+
+
+\section{Decision Support Systems in Agribusiness}
+
+Agribusiness decision support systems (DSS) refer to computer-based systems which help farmers and
+other agricultural stakeholders in coming up with sound decisions by analyzing data and providing
+actionable information. These systems are able to combine data of various sources, analyze through
+analytical models, and provide recommendations that aid in planning, resource allocation, and risk
+management. Regarding the case of smallholder agriculture, DSS can enhance productivity, alleviate
+uncertainty, and create sustainability through evidence-based decisions.
+
+Having DSS in agriculture is essential because they can be used to analyze raw data and give
+meaningful information. The nature of agricultural decision-making is complicated because of the
+interplay of economic, operational, and environmental factors. This complexity can be reduced with
+the help of DSS that can detect patterns and predict outcomes and therefore facilitate timely and
+effective interventions. According to \cite{duan2021multicriteria}, DSS can help achieve sustainable
+agribusiness through enhancing efficiency, optimizing resource utilisation, and long-term planning.
+Their multicriteria assessment shows how properly designed systems can help to improve both economic
+and environmental performance in farming environments.
+
+In spite of these advantages, current DSS are usually limited, which restricts their use by
+smallholder farmers in developing countries. Many systems are technologically intricate and require
+good connectivity, high-quality data, and expert knowledge to operate. This poses a hindrance to
+the smallholder who might not have access to reliable internet, digital capabilities, or technical
+training. Moreover, some DSS target large commercial farming and are therefore less relevant to
+the conditions of small farming. \cite{duan2021multicriteria} observe that technical performance is
+not the only factor to consider when evaluating the use of DSS: usability and accessibility are
+often disregarded in system design.
+
+The other major weakness is the absence of contextual adaptation. Differences in agricultural
+conditions across regions are high, and DSS whose recommendations do not consider local practises,
+climate conditions, and the scarcity of resources can produce impractical and irrelevant
+recommendations. This enhances mistrust toward the system, granting it little usefulness to the
+end users.
+
+These challenges mean that simple, low-cost, and understandable DSS that are smallholder-specific
+are urgently needed. These systems must be built on easily accessible data, employ clear-cut models,
+and contain clear and practical suggestions. This is the need that this study caters to, as it will
+create a machine learning-based predictive model which can assist in making decisions in the
+post-harvest process. Based on simplicity and usability, the proposed approach will fill the gap
+between sophisticated analytics and user intervention, which directly leads to Research Question~3.
+
+
+\section{Research Gap}
+
+Although machine learning has been extensively used in the agricultural sector, there are major gaps
+in its use for smallholder agribusinesses in developing nations. The existing literature has been
+largely concerned with high-accuracy types of models, including typically complicated algorithms and
+large-scale datasets, which may not be readily obtainable and applicable to smallholder
+settings~\cite{jabed2024crop}. This creates a detachment between the use of technology and the
+reality of application.
+
+A significant gap is the absence of cheap machine learning applications that are environmentally
+adapted to smallholder farmers. Most existing systems need powerful computing power, good internet
+connectivity, and specialist skills, which restrict their use in resource-limited environments. It
+is further noted that existing solutions are usually set to operate at large-scale commercial
+farming without much regard for the operational realities and constraints of smallholder
+agrobusinesses.
+
+Another essential disparity is the underutilisation of basic, structured data. Although deep
+learning approaches have demonstrated good performance, they usually require large amounts of data,
+which is not frequently accessible in developing areas~\cite{meghraoui2024applied}. Little
+literature has investigated how simpler machine learning models can successfully use small, tabular
+data to produce meaningful predictions.
+
+In addition, the merging of predictive models and real actionable decisions is largely absent.
+Numerous reports are devoted to prediction accuracy without converting findings into practical
+suggestions for farmers. In this paper, these gaps are filled by identifying an interpretable,
+low-cost machine learning methodology on limited data to aid post-harvest decision making in
+smallholder settings.
+
+
+\section{Conceptual Framework}
+
+This paper follows a conceptual framework that relates input variables, machine learning processes,
+and decision-oriented outputs to respond to the risk of post-harvest losses. The framework is
+designed around three major components: inputs, processing, and outputs.
+
+The \textbf{input stage} involves the environmental and operational factors that affect post-harvest
+results. These are variables in terms of temperature, humidity, storage method, storage duration,
+time of transportation, and handling measures. Such factors are generally known to be significant
+determinants of post-harvest losses in agricultural systems.
+
+The \textbf{processing stage} includes the use of machine learning models, namely Decision Trees,
+Logistic Regression, and Random Forests. These models are used to predict relationships between
+input variables and historical data on losses, in order to determine trends and provide predictive
+information. They are chosen according to their capability to process structured information, their
+readability, and their low computational cost.
+
+The \textbf{output stage} generates risk estimates and recommendations for action. These outputs
+aid decision making by allowing farmers to detect high-risk situations and implement proper
+post-harvest management strategies that mitigate losses and enhance profitability.
