@@ -1,9 +1,13 @@
 # Machine Learning–Based Prediction of Post-Harvest Loss Risk for Smallholder Agro-Businesses in Developing Countries
 
 **Author:** Alan Albino Roberto Chaúque
+
 **Degree:** Bachelor of Computer Science
+
 **Institution:** Gisma University of Applied Sciences — Department of Computer and Data Sciences
+
 **Supervisor:** Amirhossein Jamalian
+
 **Submission:** March 2026
 
 ---
